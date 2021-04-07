@@ -23,12 +23,37 @@ import static com.example.inversible.R.string.samsung;
 
 public class InverSible extends AppCompatActivity{
     TextView edtDuracion;
-    Button btnDuracion;
+    Button btnCalculo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inver_sible);
+        btnCalculo = findViewById(R.id.btnCalculo);
+        btnCalculo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(InverSible.this);
+                builder.setMessage("inversion");
+                builder.setTitle("Tu inversion es:");
+                builder.setMessage("Do you want to close this application ?");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //builder.finish();
+                    }
+                });
+                builder.setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //  Action for 'NO' Button
+
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
 
 
 
