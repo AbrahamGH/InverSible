@@ -21,11 +21,13 @@
         android:layout_height="wrap_content"
         android:hint="Monto de Inversion">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMonto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"
+            android:text="25.25"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -35,11 +37,13 @@
         android:layout_height="wrap_content"
         android:hint="Interes(Porsentaje)">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPorcentaje"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="numberDecimal"
+            android:text="35.5"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,11 +54,13 @@
         android:layout_height="wrap_content"
         android:hint="Duracion de Inversion (Meses)">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDuracion"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:text="3"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
