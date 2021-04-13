@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -19,6 +20,7 @@ import java.util.List;
 
 public class resultaInversion extends AppCompatActivity {
     TextView txtInverison,txtGanancia,txtPlazo,txtTotal;
+    Button btnRegresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,20 @@ public class resultaInversion extends AppCompatActivity {
         txtGanancia = findViewById(R.id.txtGanancia);
         txtPlazo = findViewById(R.id.txtPlazo);
         txtTotal = findViewById(R.id.txtTotal);
+        btnRegresar = findViewById(R.id.btnRegresar);
 
         calculo();
+        regresar();
+    }
+
+    private void regresar() {
+        btnRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent regresar = new Intent(resultaInversion.this,InverSible.class);
+                startActivity(regresar);
+            }
+        });
     }
 
     private void calculo() {
